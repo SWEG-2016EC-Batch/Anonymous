@@ -30,7 +30,7 @@
 Calculate the number of miles using the formula:
 number_of_miles = tankcapacity * milespergallon
 </pre>
-    <li>Display the calculated total distance to the user.</li>
+    <li>Display the calculated number of miles to the user.</li>
 </ul>
 
 </body>
