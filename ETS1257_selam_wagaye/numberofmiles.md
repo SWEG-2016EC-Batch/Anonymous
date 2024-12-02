@@ -51,14 +51,13 @@ BEGIN
     input milespergallon
   
     number_of_miles = tankcapacity * milespergallon
-    output "The automobile can be driven " + totaldistance + " miles without refueling."
+    output "The automobile can be driven " + number_of_miles + " miles without refueling."
 END
 </pre>
 
 <html>
   <h2> Flowchart of number of miles miles</h2>
   <div align = "left">
-  <a href="https://github.com/user-attachments/assets/95fd5bba-aa67-4c3c-8d79-88a292ab46a1
-" target="_blank">Click here to see the flowchart of number of miles calculator </a>
+  <a href="https://github.com/user-attachments/assets/50792ce4-2691-4202-b703-e194b3ff84ae" target="_blank">Click here to see the flowchart of number of miles calculator </a>
     
 </html>
