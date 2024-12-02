@@ -34,9 +34,9 @@
 
 <pre>
 BEGIN
-    declare x AS float
-    declare y AS float
-    declare result AS float
+    declare x AS double
+    declare y AS double
+    declare result AS double
   
     output "Enter the base of the number"
     input x
