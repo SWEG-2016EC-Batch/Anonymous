@@ -1,4 +1,4 @@
-##pseudocode
+## PSEUDOCODE
 
  * Start
 
