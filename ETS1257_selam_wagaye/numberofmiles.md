@@ -27,7 +27,7 @@
     <li>Read the fuel tank capacity from the user.</li>
     <li>Read the miles per gallon from the user.</li>
 <pre>
-Calculate the total distance using the formula:
+Calculate the number of miles using the formula:
 number_of_miles = tankcapacity * milespergallon
 </pre>
     <li>Display the calculated total distance to the user.</li>
