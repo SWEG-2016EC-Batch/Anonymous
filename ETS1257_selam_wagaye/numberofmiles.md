@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h1><b> Miles calculator </b></h1>
+  <h1><b> number of Miles calculator </b></h1>
   
 <html>
 <body>
@@ -56,9 +56,9 @@ END
 </pre>
 
 <html>
-  <h2> Flowchart of miles</h2>
+  <h2> Flowchart of number of miles miles</h2>
   <div align = "left">
   <a href="https://github.com/user-attachments/assets/95fd5bba-aa67-4c3c-8d79-88a292ab46a1
-" target="_blank">Click here to see the flowchart of miles calculator </a>
+" target="_blank">Click here to see the flowchart of number of miles calculator </a>
     
 </html>
