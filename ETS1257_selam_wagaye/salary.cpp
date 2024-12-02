@@ -20,7 +20,7 @@ int main() {
     cout << "Enter bonus rate per hour: "<<endl;
     cin >> bonus_rate;
 
-    cout << "Enter base salary in birr: "<<endl;
+    cout << "Enter base salary in dollar: "<<endl;
     cin >> base_salary;
 
     double bonus_payment = bonus_rate * working_hours;
@@ -33,8 +33,8 @@ int main() {
 
     cout <<"Dear "<< Fullname <<" your payment for this month is "<< endl;
 
-    cout << "Bonus Payment: " << bonus_payment << " birr"<< endl;
-    cout << "Gross Salary: " << gross_salary << " birr"<< endl;
-    cout << "Net Salary: " << net_salary << " birr"<< endl;
+    cout << "Bonus Payment: $ " << bonus_payment << endl;
+    cout << "Gross Salary: $" << gross_salary << endl;
+    cout << "Net Salary: $" << net_salary << endl;
     return 0;
 }
