@@ -28,3 +28,5 @@ int sec=(transmission_time%60);
   
 //print transmission time
 cout<<"transmission time is: "<<days<<"days: "<<hour<<"hours: "<<min<<"minutes"<<sec<<"seconds"<<endl;
+return 0;
+}
