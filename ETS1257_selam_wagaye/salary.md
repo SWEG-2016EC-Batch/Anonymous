@@ -111,4 +111,11 @@ END
 </html>
 <h2> Flowchart for the power calculator </h2>
 <a href="https://github.com/user-attachments/assets/47584262-62bd-41c6-a712-314e10f08505
-"_blank">Click here to see the flowchart of the power calculator</a>
+"_blank">Click here to see the flowchart
+            
+    
+  
+ 
+ 
+  
+
