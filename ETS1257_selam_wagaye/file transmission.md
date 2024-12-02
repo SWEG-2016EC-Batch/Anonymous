@@ -92,7 +92,11 @@ START
     // Output the transmission time
     OUTPUT "Transmission time is: ", days, " days: ", hour, " hours: ", min, " minutes: ", sec, " seconds."
 END
-        </code>
-    </pre>
+ </pre>
 </body>
 </html>
+<h2> flowchart for BMI calculator</h2>
+<a href="https://github.com/user-attachments/assets/6a558970-0b16-41db-b9ec-e1e0490c802b
+" target="_blank">Click here to see the flowchart of the BMI calculator </a>
+    
+</html>      
