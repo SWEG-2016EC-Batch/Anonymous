@@ -3,6 +3,7 @@
   <h1><b> Power calculator </b></h1>
 <html>
 <body>
+  <div align="left">
     <h1>Pseudocode for Salary Calculation</h1>
     <pre><code>
 BEGIN
