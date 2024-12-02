@@ -21,7 +21,7 @@
 ## FLOW CHART
 
    ```mermaid
-          ground TD
+          graph TD
        A(start)-->B[declare and accept the inputs]
        B-->C[calculate bonus as bonus = over_time_hour * bonus_rate]
        C-->D[calculate bonus as bonus = over_time_hour * bonus_rate]
