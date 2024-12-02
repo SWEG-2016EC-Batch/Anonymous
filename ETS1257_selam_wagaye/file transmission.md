@@ -1,5 +1,5 @@
 <div align = "center">
-  <h1> BMI calcuator </h1>
+  <h1> File transmission time calcuator </h1>
 <body>
   <div align ="left">
 <body>
