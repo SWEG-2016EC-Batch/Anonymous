@@ -96,8 +96,6 @@ END
 </body>
 </html>
 <h2> flowchart for file transmission time calculator</h2>
-<a href="https://github.com/user-attachments/assets/d8f48e57-f369-465a-a5cc-04125bbd7ff7
-
-" target="_blank">Click here to see the flowchart of the file transmission time calculator  calculator </a>
+<a href="https://github.com/user-attachments/assets/d8f48e57-f369-465a-a5cc-04125bbd7ff7" target="_blank">Click here to see the flowchart of the file transmission time calculator  calculator </a>
     
 </html>      
