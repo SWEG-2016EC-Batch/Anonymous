@@ -1,9 +1,27 @@
-<a name="readme-top"></a>
-<div align="center">
-  <h1><b> Power calculator </b></h1>
-<html>
+<html> 
+  <div align ="center">
+<h1> Salary calculator</h1>
+
+</html>
 <body>
-  <div align="left">
+  <div align ="left">
+    <h2> Problem Analysis</h2>
+    
+    <h2>Input Collection</h2>
+   
+    <h2>Calculations</h2>
+    <ul>
+        <li>It calculates the bonus payment by multiplying the weekly hours worked by the bonus rate.</li>
+        <li>It calculates the gross salary, which is the sum of the base salary and the bonus payment.</li>
+        <li>It determines the pension deduction, which is 5% of the gross salary.</li>
+        <li>It calculates the tax deduction, which is 15% of the gross salary.</li>
+        <li>Finally, it computes the net salary by subtracting the pension and tax from the gross salary.</li>
+    </ul>
+
+    <h2>Output</h2>
+    <p>The program then outputs the employee's name, bonus payment, gross salary, and net salary.</p>
+</body>
+</html>
     <h1>Pseudocode for Salary Calculation</h1>
     <pre><code>
 BEGIN
