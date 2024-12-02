@@ -95,7 +95,7 @@ END
 </body>
 </html>
 <html>
-  <h2> Flowchart of BMI</h2>
+  <h2> Flowchart of salary calculator</h2>
   <div align = "left">
   <a href="https://github.com/user-attachments/assets/d2183a8e-275a-45d3-ab33-c9b78dcc1fcf
 " target="_blank">Click here to see the flowchart of the salary calculator </a>
