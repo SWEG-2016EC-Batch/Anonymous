@@ -1,5 +1,6 @@
 ## PSEUDOCODE
 
+* start
 * read the input (base salary, bonus rate, over time hour)
 * read over time bonus rate if the over time hour is grater than 40
 * calculate the tax rate
@@ -17,3 +18,4 @@ pension = gross salary * 0.07
 tax = gross salary * tax rate
 net income = gross salary - ( tax + pension)
 * display the result
+* end
