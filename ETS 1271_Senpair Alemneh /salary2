@@ -1,15 +1,18 @@
 #include <iostream>
 using namespace std;
+
 int main(){
+// declare and accept input
 
-// declare and accept gross salary,tax rate,over time bonus rate, over time hour, bonus rate, pension, tax, bonus, net income and employee name 
+double gross_salary, over_time_hour, tax_rate, bonus_rate, pension, tax, bonus, over_time_bonus_rate, net_income, base_salary;
+double std_work_hrs_permonth= 176; //standard work hour per month (8 hrs per day for 5 days per week= 22 days per month= 176 hrs)
+double hourly_rate; // salary / standard work hour per month
 
-double gross_salary, over_time_hour, tax_rate, bonus_rate, pension, tax, bonus, over_time_bonus_rate, net_income, income_salary;
 cout<<"please enter employee name: ";
 char employee_name [40];
-cin>> employee_name;
+cin.getline(employee_name,40);
 cout<<"please enter employee's base salary in birr: ";
-cin>> gross_salary;
+cin>> base_salary;
 cout<<"please enter employee's bonus rate that is in the range of 0 and 1: ";
 cin>> bonus_rate;
 cout<<"please enter employee's overtime hour in hour: ";
@@ -29,7 +32,7 @@ if(over_time_hour > 40)
  {
 	tax_rate= 0;
  }
- else if (gross_salary >= 200 && gross_salary <= 600)
+ else if(gross_salary >= 200 && gross_salary <= 600)
  {
 	tax_rate= 0.1;
  }
@@ -50,25 +53,27 @@ else if(gross_salary >= 1200 && gross_salary <= 2000)
 	tax_rate= 0.3;
  }
  
-// calculate bonus rate, income salary, pension, tax and net salary
+// calculate bonus, income salary, pension, tax and net salary
 
 if (over_time_hour > 40)
 {
 	bonus_rate = over_time_bonus_rate;
 }
 
-bonus = over_time_hour * bonus_rate;
-income_salary = bonus + gross_salary;
+hourly_rate= base_salary / std_work_hrs_permonth;
+bonus = over_time_hour* hourly_rate * bonus_rate;
+gross_salary = bonus + base_salary;
 pension = gross_salary * 0.07;
-tax = income_salary * tax_rate;
-net_income = income_salary - ( tax+ pension);
+tax = gross_salary * tax_rate;
+net_income = gross_salary - ( tax+ pension);
 
 //print the results 
 
+cout<<endl;
 cout<<"employee name: "<<employee_name<<endl;
+cout<<employee_name<<"'s basic salary: "<<base_salary<<"in birr"<<endl;
 cout<<employee_name<<"'s net income: "<<net_income<<" in birr"<<endl;
-cout<<employee_name<<"'s gross salary: "<<gross_salary<<endl;
-cout<<employee_name<<"'s bonus payment: "<< bonus<<endl;
+cout<<employee_name<<"'s bonus payment: "<< bonus<<"in birr"<<endl;
   
 return 0;
 }
