@@ -2,18 +2,18 @@
 using namespace std;
 
 
-void five_num_five_times();
-void alphabets_upto_x();
-void num_half_pyramid_left();
-void num_half_pyramid_right();
-void alphabets_half_pyramid();
-void five_alphabets_five_times();
-void hollow_rectangle();
-void inverted_half_pyramid();
-void hollow_inverted_half_pyramid();
-void full_pyramid();
-void inverted_full_pyramid();
+void five_times();
+void alphabets();
+void pyramid_left();
+void pyramid_right();
+void alphabets_pyramid();
+void five_alphabets();
+void hollow();
+void inverted_pyramid();
 void hollow_pyramid();
+void full();
+void inverted_full();
+void hollow_p();
 
 int main() {
     int choice;
@@ -51,18 +51,18 @@ int main() {
         }
 
         switch (number) {
-            case 1: five_num_five_times(); break;
-            case 2: alphabets_upto_x(); break;
-            case 3: num_half_pyramid_left(); break;
-            case 4: num_half_pyramid_right(); break;
-            case 5: alphabets_half_pyramid(); break;
-            case 6: five_alphabets_five_times(); break;
-            case 7: hollow_rectangle(); break;
-            case 8: inverted_half_pyramid(); break;
-            case 9: hollow_inverted_half_pyramid(); break;
-            case 10: full_pyramid(); break; 
-            case 11: inverted_full_pyramid(); break; 
-            case 12: hollow_pyramid(); break; 
+            case 1: five_times(); break;
+            case 2: alphabets(); break;
+            case 3: pyramid_left(); break;
+            case 4: pyramid_right(); break;
+            case 5: alphabets_pyramid(); break;
+            case 6: five_alphabets(); break;
+            case 7: hollow(); break;
+            case 8: inverted_pyramid(); break;
+            case 9: hollow_pyramid(); break;
+            case 10: full_(); break; 
+            case 11: inverted_full(); break; 
+            case 12: hollow_p(); break; 
         }
 
         cout << "Would you like to see more patterns? (0 / 1): ";
@@ -75,7 +75,7 @@ int main() {
     return 0;
 }
 
-void five_num_five_times() {
+void five_times() {
     cout << endl << "Pattern 1" << endl << endl;
     for (int i = 1; i <= 5; i++) {
         for (int j = 1; j <= 5; j++) {
@@ -85,7 +85,7 @@ void five_num_five_times() {
     }
 }
 
-void alphabets_upto_x() {
+void alphabets() {
     cout << endl << "Pattern 2" << endl;
     for (char i = 'A'; i <= 'X'; i++) {
         cout << i << " ";
@@ -97,7 +97,7 @@ void alphabets_upto_x() {
 }
 
 
-void num_half_pyramid_left() {
+void pyramid_left() {
     cout << endl << "Pattern 3" << endl;
     for (int i = 1; i <= 5; i++) {
         for (int j = 1; j <= i; j++) {
@@ -107,7 +107,7 @@ void num_half_pyramid_left() {
     }
 }
 
-void num_half_pyramid_right() {
+void pyramid_right() {
     cout << endl << "Pattern 4" << endl;
     for (int i = 1; i <= 5; i++) {
         for (int k = 5 - i; k > 0; k--) {
@@ -121,7 +121,7 @@ void num_half_pyramid_right() {
 }
 
 
-void alphabets_half_pyramid() {
+void alphabets_pyramid() {
     cout << endl << "Pattern 5" << endl;
     for (int i = 1; i <= 5; i++) {
         for (char j = 'A'; j < 'A' + i; j++) {
@@ -132,7 +132,7 @@ void alphabets_half_pyramid() {
 }
 
 
-void five_alphabets_five_times() {
+void five_alphabets() {
     cout << endl << "Pattern 6" << endl;
     for (int i = 1; i <= 5; i++) {
         cout << "a, b, c, d, e ";
@@ -141,7 +141,7 @@ void five_alphabets_five_times() {
 }
 
 
-void hollow_rectangle() {
+void hollow() {
     cout << endl << "Hollow Rectangle" << endl;
     for (int i = 1; i <= 6; i++) {
         for (int j = 1; j <= 7; j++) {
@@ -155,7 +155,7 @@ void hollow_rectangle() {
     } 
 }
 
-void inverted_half_pyramid() {
+void inverted_pyramid() {
     cout << endl << "Inverted Half Pyramid" << endl;
     for (int i = 0; i < 5; i++) {
         for (int j = 1; j <= (5 - i); j++) {
@@ -164,4 +164,92 @@ void inverted_half_pyramid() {
         cout << endl;
     }
 }
+
+
+
+void hollow_pyramid()
+{
+cout<<endl;
+cout<<"hollow inverted half pyramid"<<endl;
+for(int i= 6; i>=1; i--)
+{
+	for (int j= 1; j<=i; j++)
+	{
+		if(j==1||i==6|i==1||i==j)
+		{
+		cout<<"* ";
+		}
+		else 
+		{
+		cout<<"  ";
+		}
+	
+	}
+	cout<<endl;
+}
+}
+void full()
+{
+cout<<endl;
+cout<<"full pyramid "<<endl;
+
+for(int i=1; i<=6; i++)
+{
+	for(int j = 1; j <=6-i ; j++)
+	{
+		cout<<"  ";
+	}
+	for(int k=1; k<=i; k++)
+	{
+	    cout<<"  * ";
+	}
+	cout<<endl;
+}
+}
+
+
+void inverted_full()
+{
+cout<<endl;
+cout<<"inverted full pyramid "<<endl;
+
+for(int i=1; i<=6; i++)
+{
+	for(int j=1; j<=6-(6-i); j++)
+	{
+		cout<<"  ";
+	}
+	for(int k=0; k<=6-i; k++)
+	{
+		cout<<"  * ";
+	}
+cout<<endl;
+}
+}
+
+void hollow_p()
+{
+cout<<endl;
+cout<<"hollow pyramid"<<endl;
+for(int i=1; i<=6; i++)
+{
+	for(int j=1; j<=6-i; j++)
+	{
+		cout<<"  ";
+	}
+	for(int k=1; k<=6-(6-i); k++)
+	{
+		if (i==6||k==1||k==6-(6-i))
+		{
+			cout<<"  * ";
+		}
+		else
+		{
+			cout<<"    ";
+		}
+	}
+cout<<endl;
+}
+}
+
 
