@@ -43,18 +43,18 @@
       * initalize counter i to A
       * set i<=column and increment i by 1 for the row
       * print i
-      * if column = 14, on (i-8) % column= 0 print new line 
-      * if column = 19, on (i-7) % column= 0 print new line 
-      * if column = 10 or 12 or 15 or 20 , on (i-4) % column= 0 print new line
-      * if column = 7 or 9 or 21, on (i-1) % column= 0 print new line
-      * if column < 3 or 4 or 8 or 16 , on (i) % column= 0 print new line
-      * if column = 5 or 13 , on (i+1) % column= 0 print new line
-      * if column = 3 or 6 or 11 or 22, on (i+2) % column= 0 print new line
-      * if column = 23 , on (i+5) % column= 0 print new line
-      * if column = 24, on (i-16) % column= 0 print new line
-      * if column = 17, on (i+4) % column= 0 print new line
-      * if column = 18, on (i+8) % column= 0 print new line
-      * if column = 25 , on (i+11) % column= 0 print new line
+      * if column = 14, then (i-8) % column= 0  then print new line 
+      * if column = 19, then (i-7) % column= 0 then print new line 
+      * if column = 10 or 12 or 15 or 20 , then (i-4) % column= 0 then print new line
+      * if column = 7 or 9 or 21, then (i-1) % column= 0 then print new line
+      * if column < 3 or 4 or 8 or 16 , then (i) % column= 0 then print new line
+      * if column = 5 or 13 , then (i+1) % column= 0 then print new line
+      * if column = 3 or 6 or 11 or 22, then (i+2) % column= 0 then print new line
+      * if column = 23 , then (i+5) % column= 0 then print new line
+      * if column = 24, then (i-16) % column= 0 then print new line
+      * if column = 17, then (i+4) % column= 0 then print new line
+      * if column = 18, then (i+8) % column= 0 then print new line
+      * if column = 25 , then (i+11) % column= 0 then print new line
   * to print natural numbers upto 5, 5 times in half pyramid to the left.
       * read row and column
       * initalize counter i to 1
