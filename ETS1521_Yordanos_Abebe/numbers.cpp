@@ -147,22 +147,3 @@ void sum() {
     cout << "The sum is: " << sum << endl;
 }
 
-void swap() {
-    // Implementation for swapping first and last digits will go here
-}
-
-void palindrom() {
-    // Implementation for checking palindrome will go here
-}
-
-void frequency() {
-    // Implementation for checking frequency of each digit will go here
-}
-
-void strong() {
-    // Implementation for checking if a number is strong will go here
-}
-
-void perfect() {
-    // Implementation for checking if a number is perfect will go here
-}
