@@ -2,13 +2,13 @@
 using namespace std;
 
 // Function declarations
-void reverseing();
-void counting_digits();
-void even_products();
-void first_last_number_sum();
-void swap_first_last_digit();
+void reverse();
+void counting();
+void products();
+void sum();
+void swap();
 void palindrom();
-void frequency_of_digit();
+void frequency();
 void strong();
 void perfect();
 
@@ -46,13 +46,13 @@ int main() {
 
         // Switch case for menu options
         switch(num) {
-            case 1: reverseing(); break;
-            case 2: counting_digits(); break;
-            case 3: even_products(); break;
-            case 4: first_last_number_sum(); break;
-            case 5: swap_first_last_digit(); break;
+            case 1: reverse(); break;
+            case 2: counting(); break;
+            case 3: products(); break;
+            case 4: sum(); break;
+            case 5: swap(); break;
             case 6: palindrom(); break;
-            case 7: frequency_of_digit(); break;
+            case 7: frequency(); break;
             case 8: strong(); break;
             case 9: perfect(); break;
         }
@@ -67,7 +67,7 @@ int main() {
     return 0;
 }
 
-void reverseing() {
+void reverse() {
     cout << endl;
     cout << "Reversing the number" << endl;
     unsigned long long int num1;
@@ -83,7 +83,7 @@ void reverseing() {
     cout << "The reversed number is: " << reversed_num << endl;
 }
 
-void counting_digits() {
+void counting() {
     cout << endl;
     cout << "Counting the digits of the number" << endl;
     unsigned long long int num1;
@@ -98,7 +98,7 @@ void counting_digits() {
     cout << "The number of digits is: " << count << endl;
 }
 
-void even_products() {
+void products() {
     cout << endl;
     cout << "Finding the even digits of the number and multiplying" << endl;
     unsigned long long int num1;
@@ -123,7 +123,7 @@ void even_products() {
     }
 }
 
-void first_last_number_sum() {
+void sum() {
     cout << endl;
     cout << "Finding the last and first digits of the number and adding them" << endl;
     unsigned long long int num1;
@@ -147,7 +147,7 @@ void first_last_number_sum() {
     cout << "The sum is: " << sum << endl;
 }
 
-void swap_first_last_digit() {
+void swap() {
     // Implementation for swapping first and last digits will go here
 }
 
@@ -155,7 +155,7 @@ void palindrom() {
     // Implementation for checking palindrome will go here
 }
 
-void frequency_of_digit() {
+void frequency() {
     // Implementation for checking frequency of each digit will go here
 }
 
