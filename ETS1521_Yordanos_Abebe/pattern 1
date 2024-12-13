@@ -165,18 +165,3 @@ void inverted_half_pyramid() {
     }
 }
 
-void hollow_inverted_half_pyramid() {
-    // Define this function as needed.
-}
-
-void full_pyramid() {
-    // Define this function as needed.
-}
-
-void inverted_full_pyramid() {
-    // Define this function as needed.
-}
-
-void hollow_pyramid() {
-    // Define this function as needed.
-}
