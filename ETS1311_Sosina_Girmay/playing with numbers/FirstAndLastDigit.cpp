@@ -16,7 +16,7 @@ int main(){
     lastDigit = num % 10;
     num /= 10;
     while(num != 0){
-        firstDigit = num % 10; // since we are not storing the previous values of the remainder, we will have the first digit at 
+        firstDigit = num % 10; // since we are not storing the previous values of the remainder, we will have the first digit at the end
         num /= 10;
     }
     cout<<"The first and the last digits of "<<temp<<" is "<<firstDigit<<" and "<<lastDigit<<" respectively and their sum is "<<lastDigit + firstDigit;
