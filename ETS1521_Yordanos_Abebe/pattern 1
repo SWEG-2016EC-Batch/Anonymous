@@ -1,0 +1,188 @@
+#include <iostream>
+using namespace std;
+
+// Declaring functions 
+void five_num_five_times();
+void alphabets_upto_x();
+void num_half_pyramid_left();
+void num_half_pyramid_right();
+void alphabets_half_pyramid();
+void five_alphabets_five_times();
+void hollow_rectangle();
+void inverted_half_pyramid();
+// Function prototypes for missing patterns
+void hollow_inverted_half_pyramid();
+void full_pyramid();
+void inverted_full_pyramid();
+void hollow_pyramid();
+
+int main() {
+    int choice;
+
+    // Menu display
+    do {
+        cout << "* MENU *" << endl;
+        cout << endl;
+        cout << "Enter 1 to print natural numbers up to 5, 5 times." << endl;
+        cout << "Enter 2 to print alphabets up to x, in 4 rows." << endl;
+        cout << "Enter 3 to print natural numbers up to 5, 5 times in half pyramid to the left." << endl;
+        cout << "Enter 4 to print natural numbers up to 5, 5 times in half pyramid to the right." << endl;
+        cout << endl;
+        cout << "Enter 5 to print alphabets up to e, 5 times in half pyramid." << endl;
+        cout << "Enter 6 to print alphabets up to e, 5 times." << endl;
+        cout << "Enter 7 to print hollow rectangle." << endl;
+        cout << "Enter 8 to print inverted half pyramid." << endl;
+        cout << endl;
+        cout << "Enter 9 to print hollow inverted half pyramid." << endl;
+        cout << "Enter 10 to print full pyramid." << endl;
+        cout << "Enter 11 to print inverted full pyramid." << endl;
+        cout << "Enter 12 to print hollow pyramid." << endl;
+        cout << endl;
+
+        int number;
+        cout << "Please enter number to choose the patterns: ";
+        cin >> number;
+
+        // Input validation
+        while (cin.fail() || number < 1 || number > 12) {
+            cout << "Please enter a valid number from the menu (1-12): ";
+            cin.clear(); // clear error flag
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // discard invalid input
+            cin >> number; // re-read input
+        }
+
+        switch (number) {
+            case 1: five_num_five_times(); break;
+            case 2: alphabets_upto_x(); break;
+            case 3: num_half_pyramid_left(); break;
+            case 4: num_half_pyramid_right(); break;
+            case 5: alphabets_half_pyramid(); break;
+            case 6: five_alphabets_five_times(); break;
+            case 7: hollow_rectangle(); break;
+            case 8: inverted_half_pyramid(); break;
+            case 9: hollow_inverted_half_pyramid(); break; // Make sure this function is defined
+            case 10: full_pyramid(); break; // Make sure this function is defined
+            case 11: inverted_full_pyramid(); break; // Make sure this function is defined
+            case 12: hollow_pyramid(); break; // Make sure this function is defined
+        }
+
+        cout << "Would you like to see more patterns? (0 / 1): ";
+        cin >> choice;
+
+    } while (choice == 1);
+
+    cout << "Goodbye! :(" << endl;
+
+    return 0;
+}
+
+// Pattern 1
+void five_num_five_times() {
+    cout << endl << "Pattern 1" << endl << endl;
+    for (int i = 1; i <= 5; i++) {
+        for (int j = 1; j <= 5; j++) {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+}
+
+// Pattern 2
+void alphabets_upto_x() {
+    cout << endl << "Pattern 2" << endl;
+    for (char i = 'A'; i <= 'X'; i++) {
+        cout << i << " ";
+        if ((i - 'A' + 1) % 6 == 0) { // Adjusted for newline logic
+            cout << endl;
+        }
+    }
+    cout << endl; 
+}
+
+// Pattern 3
+void num_half_pyramid_left() {
+    cout << endl << "Pattern 3" << endl;
+    for (int i = 1; i <= 5; i++) {
+        for (int j = 1; j <= i; j++) { // Adjusted loop condition
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+}
+
+// Pattern 4
+void num_half_pyramid_right() {
+    cout << endl << "Pattern 4" << endl;
+    for (int i = 1; i <= 5; i++) {
+        for (int k = 5 - i; k > 0; k--) {
+            cout << "  ";
+        }
+        for (int j = 1; j <= i; j++) { // Adjusted loop condition
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+}
+
+// Pattern 5
+void alphabets_half_pyramid() {
+    cout << endl << "Pattern 5" << endl;
+    for (int i = 1; i <= 5; i++) {
+        for (char j = 'A'; j < 'A' + i; j++) {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+}
+
+// Pattern 6
+void five_alphabets_five_times() {
+    cout << endl << "Pattern 6" << endl;
+    for (int i = 1; i <= 5; i++) {
+        cout << "a, b, c, d, e ";
+        cout << endl;
+    }
+}
+
+// Hollow Rectangle 
+void hollow_rectangle() {
+    cout << endl << "Hollow Rectangle" << endl;
+    for (int i = 1; i <= 6; i++) {
+        for (int j = 1; j <= 7; j++) {
+            if (j == 1 || j == 7 || i == 1 || i == 6) {
+                cout << "* ";
+            } else {
+                cout << "  ";
+            }
+        }
+        cout << endl;
+    } 
+}
+
+// Inverted Half Pyramid 
+void inverted_half_pyramid() {
+    cout << endl << "Inverted Half Pyramid" << endl;
+    for (int i = 0; i < 5; i++) {
+        for (int j = 1; j <= (5 - i); j++) {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+}
+
+// Placeholder functions for missing patterns
+void hollow_inverted_half_pyramid() {
+    // Define this function as needed.
+}
+
+void full_pyramid() {
+    // Define this function as needed.
+}
+
+void inverted_full_pyramid() {
+    // Define this function as needed.
+}
+
+void hollow_pyramid() {
+    // Define this function as needed.
+}
