@@ -131,7 +131,14 @@ cin>> column;
 for(char i = 'A'; i <= 'Z' ; i++)
 {
 	cout<<i<<"  ";
-	if (column == 19)
+	if (column == 14)
+	{
+		if((i-8) % column==0)
+		{
+			cout<<endl;
+		}
+	}   
+	else if (column == 19)
 	{
 		if((i-7) % column==0)
 		{
