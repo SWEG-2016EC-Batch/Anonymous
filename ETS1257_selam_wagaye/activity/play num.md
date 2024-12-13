@@ -1,4 +1,4 @@
-<h1>Number Operations Pseudocode</h1>
+<h1> playing with Number Pseudocode</h1>
 <pre><code>BEGIN
     // Declare variables
     DECLARE num, choice, temp, digit, rev, count, prod, first, last, sum, newNum, freq, strong, perfect
