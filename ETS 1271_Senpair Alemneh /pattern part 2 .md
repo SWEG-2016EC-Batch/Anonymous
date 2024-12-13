@@ -43,6 +43,7 @@
       * initalize counter i to A
       * set i<=column and increment i by 1 for the row
       * print i
+      * if column = 14, on (i-8) % column= 0 print new line 
       * if column = 19, on (i-7) % column= 0 print new line 
       * if column = 10 or 12 or 15 or 20 , on (i-4) % column= 0 print new line
       * if column = 7 or 9 or 21, on (i-1) % column= 0 print new line
