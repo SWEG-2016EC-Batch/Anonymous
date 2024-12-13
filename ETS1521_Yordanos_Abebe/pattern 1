@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// Declaring functions 
+
 void five_num_five_times();
 void alphabets_upto_x();
 void num_half_pyramid_left();
@@ -10,7 +10,6 @@ void alphabets_half_pyramid();
 void five_alphabets_five_times();
 void hollow_rectangle();
 void inverted_half_pyramid();
-// Function prototypes for missing patterns
 void hollow_inverted_half_pyramid();
 void full_pyramid();
 void inverted_full_pyramid();
@@ -19,7 +18,7 @@ void hollow_pyramid();
 int main() {
     int choice;
 
-    // Menu display
+    
     do {
         cout << "* MENU *" << endl;
         cout << endl;
@@ -43,12 +42,12 @@ int main() {
         cout << "Please enter number to choose the patterns: ";
         cin >> number;
 
-        // Input validation
+        
         while (cin.fail() || number < 1 || number > 12) {
             cout << "Please enter a valid number from the menu (1-12): ";
-            cin.clear(); // clear error flag
-            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // discard invalid input
-            cin >> number; // re-read input
+            cin.clear(); 
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+            cin >> number;
         }
 
         switch (number) {
@@ -60,10 +59,10 @@ int main() {
             case 6: five_alphabets_five_times(); break;
             case 7: hollow_rectangle(); break;
             case 8: inverted_half_pyramid(); break;
-            case 9: hollow_inverted_half_pyramid(); break; // Make sure this function is defined
-            case 10: full_pyramid(); break; // Make sure this function is defined
-            case 11: inverted_full_pyramid(); break; // Make sure this function is defined
-            case 12: hollow_pyramid(); break; // Make sure this function is defined
+            case 9: hollow_inverted_half_pyramid(); break;
+            case 10: full_pyramid(); break; 
+            case 11: inverted_full_pyramid(); break; 
+            case 12: hollow_pyramid(); break; 
         }
 
         cout << "Would you like to see more patterns? (0 / 1): ";
@@ -76,7 +75,6 @@ int main() {
     return 0;
 }
 
-// Pattern 1
 void five_num_five_times() {
     cout << endl << "Pattern 1" << endl << endl;
     for (int i = 1; i <= 5; i++) {
@@ -87,44 +85,42 @@ void five_num_five_times() {
     }
 }
 
-// Pattern 2
 void alphabets_upto_x() {
     cout << endl << "Pattern 2" << endl;
     for (char i = 'A'; i <= 'X'; i++) {
         cout << i << " ";
-        if ((i - 'A' + 1) % 6 == 0) { // Adjusted for newline logic
+        if ((i - 'A' + 1) % 6 == 0) { 
             cout << endl;
         }
     }
     cout << endl; 
 }
 
-// Pattern 3
+
 void num_half_pyramid_left() {
     cout << endl << "Pattern 3" << endl;
     for (int i = 1; i <= 5; i++) {
-        for (int j = 1; j <= i; j++) { // Adjusted loop condition
+        for (int j = 1; j <= i; j++) {
             cout << j << " ";
         }
         cout << endl;
     }
 }
 
-// Pattern 4
 void num_half_pyramid_right() {
     cout << endl << "Pattern 4" << endl;
     for (int i = 1; i <= 5; i++) {
         for (int k = 5 - i; k > 0; k--) {
             cout << "  ";
         }
-        for (int j = 1; j <= i; j++) { // Adjusted loop condition
+        for (int j = 1; j <= i; j++) { 
             cout << j << " ";
         }
         cout << endl;
     }
 }
 
-// Pattern 5
+
 void alphabets_half_pyramid() {
     cout << endl << "Pattern 5" << endl;
     for (int i = 1; i <= 5; i++) {
@@ -135,7 +131,7 @@ void alphabets_half_pyramid() {
     }
 }
 
-// Pattern 6
+
 void five_alphabets_five_times() {
     cout << endl << "Pattern 6" << endl;
     for (int i = 1; i <= 5; i++) {
@@ -144,7 +140,7 @@ void five_alphabets_five_times() {
     }
 }
 
-// Hollow Rectangle 
+
 void hollow_rectangle() {
     cout << endl << "Hollow Rectangle" << endl;
     for (int i = 1; i <= 6; i++) {
@@ -159,7 +155,6 @@ void hollow_rectangle() {
     } 
 }
 
-// Inverted Half Pyramid 
 void inverted_half_pyramid() {
     cout << endl << "Inverted Half Pyramid" << endl;
     for (int i = 0; i < 5; i++) {
@@ -170,7 +165,6 @@ void inverted_half_pyramid() {
     }
 }
 
-// Placeholder functions for missing patterns
 void hollow_inverted_half_pyramid() {
     // Define this function as needed.
 }
