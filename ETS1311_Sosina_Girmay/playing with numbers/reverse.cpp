@@ -25,7 +25,7 @@ int main(){
 			reverse *= 10;
 		}
     }while(num != 0);
-    cout<<"The rever of "<<temp<<" is "<<reverse;
+    cout<<"The reverse of "<<temp<<" is "<<reverse;
 
 
     return 0;
