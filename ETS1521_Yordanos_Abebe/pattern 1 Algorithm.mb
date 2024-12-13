@@ -1,0 +1,98 @@
+
+
+▎Algorithm
+
+1. Start
+
+2. Initialize Variables
+
+   • choice (to hold user decision to continue)
+
+   • number (to hold the user's choice of pattern)
+
+3. Display Menu
+
+   • Print the title "* MENU *"
+
+   • Print options for patterns (1 to 12)
+
+4. Input User Choice
+
+   • Prompt user to "Please enter number to choose the patterns: "
+
+   • Read number
+
+5. Validate User Input
+
+   • While number is not between 1 and 12:
+
+     • Prompt user to "Please enter a valid number from the menu (1-12): "
+
+     • Read number
+
+6. Execute Pattern Based on User Choice
+
+   • Use a switch-case structure:
+
+     • Case 1: Call five_num_five_times()
+
+     • Case 2: Call alphabets_upto_x()
+
+     • Case 3: Call num_half_pyramid_left()
+
+     • Case 4: Call num_half_pyramid_right()
+
+     • Case 5: Call alphabets_half_pyramid()
+
+     • Case 6: Call five_alphabets_five_times()
+
+     • Case 7: Call hollow_rectangle()
+
+     • Case 8: Call inverted_half_pyramid()
+
+     • Case 9: Call hollow_inverted_half_pyramid() (not defined in your code)
+
+     • Case 10: Call full_pyramid() (not defined in your code)
+
+     • Case 11: Call inverted_full_pyramid() (not defined in your code)
+
+     • Case 12: Call hollow_pyramid() (not defined in your code)
+
+7. Ask User to Continue
+
+   • Prompt user with "Would you like to see more patterns? (0 / 1): "
+
+   • Read choice
+
+8. Repeat Steps 4-7 Until User Chooses Not to Continue
+
+   • Continue looping until choice is not equal to 1
+
+9. Display Exit Message
+
+   • Print "Goodbye! :("
+
+10. End
+
+▎Pattern Functions
+
+For each of the pattern functions, the following logic applies:
+
+• fivenumfive_times(): Print numbers from 1 to 5, five times.
+
+• alphabetsuptox(): Print alphabets from A to X, inserting a newline after every 6 characters.
+
+• numhalfpyramid_left(): Print a left-aligned half pyramid of numbers.
+
+• numhalfpyramid_right(): Print a right-aligned half pyramid of numbers.
+
+• alphabetshalfpyramid(): Print a half pyramid of alphabets.
+
+• fivealphabetsfive_times(): Print "a, b, c, d, e" five times.
+
+• hollow_rectangle(): Print a hollow rectangle made of asterisks.
+
+• invertedhalfpyramid(): Print an inverted half pyramid of asterisks.
+
+• Additional pattern functions (hollow inverted half pyramid, full pyramid, inverted full pyramid, hollow pyramid) need to be defined as per requirements.
+
