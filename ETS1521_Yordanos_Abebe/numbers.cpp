@@ -146,4 +146,172 @@ void sum() {
     int sum = last_digit + first_digit;
     cout << "The sum is: " << sum << endl;
 }
+void swap()
+{
+	cout<<endl;
+	cout<<"swaps the first and the last digits of the number"<<endl;
+	// acceptin the number to perform the required.
+    unsigned long long int num1;
+	cout<<"please enter a number: ";
+	cin>>num1;
+	int digit, num1_first, num1_last, a;
+	
+	// finding the last and the first digits
+	num1_last = num1 % 10;
+	while (num1>0)
+	{
+		digit = num1 % 10;
+		num1 /= 10;
+	}
+	num1_first = digit;
+	cout<<"The first digit is: "<<num1_first<<endl;
+	cout<<"The last digit is: "<<num1_last<<endl;
+	cout<<endl;
+	
+	
+	cout<<"after the swap: "<<endl;
+	a = num1_first;
+	num1_first = num1_last;
+	num1_last = a;
+  //display the result
+	cout<<"The first digit is: "<<num1_first<<endl;
+	cout<<"The last digit is: "<<num1_last<<endl;
+}
+void palindrom()
+{
+	cout<<endl;
+	cout<<"checking for palindrom"<<endl;
+	// acceptin the number to perform the required.
+	unsigned long long int num1;
+	cout<<"please enter a number: ";
+	cin>>num1;
+	int digit;
+	int reversed_num = 0;
+	int original_num = num1;
+	cout<<"The original number is: "<<original_num<<endl;
+	
+	// find the revesed number 
+	while(num1>0)
+	{
+		digit = num1 % 10;
+		num1 /= 10;
+		reversed_num = reversed_num * 10 + digit;
+	}
+
+	cout<<"The reversed number is: "<<reversed_num<<endl;
+	
+	//check if the number are palindrom or not 
+	if(reversed_num == num1)
+	{
+		cout<<"The number is palindrom"<<endl;
+	}
+	else
+	{
+		cout<<"The number is not palindrom"<<endl;	
+	}
+}
+void frequency()
+{
+cout<<endl;
+cout<<"check the frequency of digits"<<endl;
+// acceptin the number to perform the required.
+unsigned long long int num1;
+cout<<"please enter a number: ";
+cin>>num1;
+cout<<endl;
+
+int num_copy, count, digit;
+// finding the frequency
+for(int i=0; i<=9; i++)
+{
+	count=0;
+	num_copy=num1;
+	
+	while(num_copy>0){
+		digit= num_copy % 10;
+		if (digit==i)
+		{
+			count++;
+		}
+	num_copy /= 10;
+	}
+	if (count>0)
+	{
+	cout<<"The frequency of "<<digit<<" is: "<<count<<endl;
+	}
+}	
+}
+void strong()
+{
+	cout<<endl;
+	cout<<"checking for strong number"<<endl;
+	// acceptin the number to perform the required.
+	 unsigned long long int num1;
+	cout<<"please enter a number: ";
+	cin>>num1;
+	unsigned long long int number_copy = num1;
+	
+int digit; 
+unsigned long long int fact=1, sum=0;
+// finding the sum of factorial.
+	while( num1 > 0 )
+	{
+		digit = num1 % 10;
+		num1 /= 10;
+		
+		for(int i=1; i <= digit; i++)
+		{
+			fact *= i;
+		}
+		if(digit==1 || digit==0)
+			{
+				fact=0;
+			}
+		sum += fact;
+		fact=1;
+	}
+	cout<<"the sum of the factorial is: "<<sum<<endl;
+	// checking if the number is strong or not  
+	if( sum == number_copy)
+	{
+		cout<<"the number is strong number. "<<endl;
+	}
+	else
+	{
+		cout<<"the number is not a strong number "<<endl;
+	}
+}
+void perfect()
+{
+	
+  cout<<endl;
+	cout<<"checking for perfect number"<<endl;
+	unsigned long long int num1;
+	cout<<"please enter a number: ";
+	cin>>num1;
+	
+	unsigned long long int number_copy=num1;
+	int divisor=0, sum = 0 ;
+// sum of the divisors 
+	for(int i=1; i<num1; i++)
+	{
+		if (num1 % i == 0)
+		{
+		divisor = i;	
+		}	
+	sum+=divisor;
+	divisor=0;
+	}
+	cout<<"the sum of the divisors: "<<sum<<endl;
+// wheather the number is perfect number or not 
+	if(sum-number_copy == number_copy)
+	{
+		cout<<"the number is a perfect number."<<endl;
+	}
+	else
+	{
+		cout<<"the number is not a perfect number."<<endl;
+	}
+}
+
 
