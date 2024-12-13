@@ -2,7 +2,7 @@
 using namespace std; 
 int main(){
     // printing the reverse of an integer.
-    int num, sum = 0, remainder, temp;
+    int num, reverse = 0, remainder, temp;
     label1:
     cout<<"Please enter a number: ";
     cin>>num;
@@ -16,16 +16,16 @@ int main(){
     temp = num;
     do{
         remainder = num % 10;
-        sum += remainder;
+        reverse += remainder;
         num /= 10;
         if(num == 0){
         	break;
 		}
 		else{
-			sum *= 10;
+			reverse *= 10;
 		}
     }while(num != 0);
-    cout<<"The rever of "<<temp<<" is "<<sum;
+    cout<<"The rever of "<<temp<<" is "<<reverse;
 
 
     return 0;
