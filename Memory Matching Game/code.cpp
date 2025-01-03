@@ -148,57 +148,56 @@ int main()
         while (cin.fail() || row1 < 0 || row1 >= ROWS || col1 < 0 || col1 >= column || revealed[row1][col1]) { 
             cin.clear();
             cin.ignore(1000, '\n');
+            cout << "Invalid input or card already matched! Try again.\n";
+            cout << "Enter the row (0 - 3) and column (0 - " << column - 1 << ") of the first card: ";
+            cin >> row1 >> col1;
+        }
 
+        // Get input for the second card
+        cout << "Enter the row (0 - 3) and column (0 - " << column - 1 << ") of the second card: ";
+        cin >> row2 >> col2;
+		
+	// if the user fails to to enter the correct rows and column or if the cards are already revealed before,allow the user to enter for rows and col again
+        while (cin.fail() || row2 < 0 || row2 >= ROWS || col2 < 0 || col2 >= column || revealed[row2][col2] || (row1 == row2 && col1 == col2)) {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Invalid input or card already matched! Try again.\n";
+            cout << "Enter the row (0 - 3) and column (0 - " << column - 1 << ") of the second card: ";
+            cin >> row2 >> col2;
+        }
 
+        // Reveal the selected cards
+        revealed[row1][col1] = true;
+        revealed[row2][col2] = true;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        // Display grid after the cards are revealed, additional info starting from line 122 because the same process
+        cout << "The Grid: \n";
+        for (int i = 0; i < ROWS; ++i)
+		 {
+            for (int j = 0; j < column; ++j) 
+			{
+                if (revealed[i][j]) 
+				{
+                    cout << grid[i][j] << " ";
+                }
+				else
+				{
+                    cout << "* ";
+                }
+            }
+            cout << endl;
+        }
+		
+	// if the cards choosen by the user match, count for win, display win if not count for loss display lose and shuffle 
+        if (grid[row1][col1] == grid[row2][col2])
+		{
+            cout << "You won! It's a match!" << endl;
+            wins++;
+        } 
+		else 
+		{
+            cout << "You lose! It is not a match! Reshuffling...\n";
+            revealed[row1][col1] = false;
 
 
 
