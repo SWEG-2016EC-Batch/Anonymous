@@ -17,25 +17,6 @@ void shuffle(int column)
     - time function help generate new seed value  */
 for (int i = 0; i < ROWS * column; ++i) 
 	{
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* - now lets change the 2d array into a 1d array.
 		   - why? because the rand function generates only one integer and we have row index and column index which means we will have to generate two numbers
 		   - to do that we will divide i by column for row index  which gives us the index 0 
