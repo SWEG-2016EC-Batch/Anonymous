@@ -1,4 +1,22 @@
+#include <iostream>
+#include <cstdlib>// for rand and srand functions and also for system clear which can be used to clear the previous output
+#include <ctime> // for time function
+using namespace std;
 
+// declare the necessary variables 
+const int ROWS = 4;
+const int MAX_COLUMNS = 8; // set it to the maximum nuber of columns 
+int grid[ROWS][MAX_COLUMNS]; // declare the an array for the grid 
+bool revealed[ROWS][MAX_COLUMNS] = { false }; // Initialize a boolean array to track revealed cards, defaulting all to false initially.
+
+// function to shuffle 
+void shuffle(int column) 
+{
+    srand(time(0));
+    /* srand function help us to change the seed. There is an information about seed in the documentaion.
+    - time function help generate new seed value  */
+for (int i = 0; i < ROWS * column; ++i) 
+	{
 
 
 
