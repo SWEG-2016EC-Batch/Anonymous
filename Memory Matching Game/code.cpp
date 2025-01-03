@@ -48,3 +48,208 @@ void shuffle(int column)
       // Swap the now element with the random element
             int temp = grid[nowRow][nowColumn];
             grid[nowRow][nowColumn] = grid[randomRowIndex][randomColumnIndex];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ revealed[row2][col2] = false;
+            shuffle(column);
+            losses++;
+        }
+
+        // Ask if the user wants to continue after every win or loss
+        int choice;
+        // prompt the user the user to enter 1 for Yes / 0 for No
+        cout << "Would you like to continue? (1 for Yes / 0 for No): ";
+        cin >> choice;
+		
+		// if the choice is invalid allow the user to choose again
+        while (cin.fail() || (choice != 0 && choice != 1)) {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Invalid input. Please enter 1 to continue or 0 to exit: ";
+            cin >> choice;
+        }
+		
+		// if the choice is 0 or quit notifies the user and break 
+        if (choice == 0) {
+            cout << "Goodbye! Thanks for playing.\n";
+            break;
+        }
+
+        // Check if the game is over
+        //make the gameOver variable to true, assuming all elements in the "revealed" array have been revealed.
+        gameOver = true;
+        for (int i = 0; i < ROWS; ++i) 
+		{
+            for (int j = 0; j < column; ++j) 
+			{
+				//if the current cell (revealed[i][j]) is false then Set gameOver to false to indicate the game isn't over.
+                if (!revealed[i][j]) 
+				{
+                    gameOver = false;
+                    break;
+                }
+            }
+            //  if gameOver is false, break out of the outer loop
+            if (!gameOver) 
+			break;
+        }
+		
+		// if "gameOver" remains true, display a congratulatory message indicating that the player has matched all pairs.
+        if (gameOver) 
+		{
+            cout << "Congratulations! You've matched all the pairs!\n";
+        }
+    }
+	// check, display the player's total wins and losses 
+    cout << "You won " << wins << " rounds and lost " << losses << " rounds.\n";
+    return 0;
+}
+
