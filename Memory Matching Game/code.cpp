@@ -98,7 +98,56 @@ int main()
 		{
             grid[i][j] = counterValue++;
             // Assign the current value of counterValue to the current grid cell.
+           // Increment counterValue to prepare the next number.
+            if (counterValue > (column * ROWS) / 2)
+			{
+			/* Once counterValue exceeds half the total number of grid cells,
+            reset it to 1 so that numbers start repeating, forming pairs.*/
+                counterValue = 1;
+            }
+        }
+    }
 
+    // Shuffle grid at the start
+    shuffle(column);
+
+    // declare the coordinates the user enters for the cards 
+    int row1, col1, row2, col2;
+    // Initialize a boolean variable to track if the game is over.
+   // `gameOver` starts as `false` and becomes `true` only when all pairs are matched or the player decides to quit.
+    bool gameOver = false;
+    
+// Main game loop
+    while (!gameOver) {
+        // Display the current state of the grid
+        cout << "The Grid: \n";
+        for (int i = 0; i < ROWS; ++i) 
+		{
+            for (int j = 0; j < column; ++j)
+			{
+				// If the current cell is revealed
+                // display the corresponding number from the `grid` array.
+                if (revealed[i][j])
+				{
+                    cout << grid[i][j] << " ";
+                } 
+                // otherwise hide it by using *
+				else 
+				{ 
+                    cout << "* ";
+                }
+            }
+            cout << endl;
+        }
+
+        // Get input for the first card
+        cout << "\nEnter the row (0 - 3) and column (0 - " << column - 1 << ") of the first card: ";
+        cin >> row1 >> col1;
+        
+		// if the user fails to to enter the correct rows and column or if the cards are already revealed before,allow the user to enter for rows and col again
+        while (cin.fail() || row1 < 0 || row1 >= ROWS || col1 < 0 || col1 >= column || revealed[row1][col1]) { 
+            cin.clear();
+            cin.ignore(1000, '\n');
 
 
 
