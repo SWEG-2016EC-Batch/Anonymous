@@ -71,6 +71,6 @@
     U -- Yes --> H
     U -- No --> V[Exit Game]
     V --> W[Display Win/Loss Summary]
-    W --> X[End Game]
+    W --> X(End Game)
     X --> Y[Display Congratulations]
-    Y --> Z[End]
+    Y --> Z(End)
