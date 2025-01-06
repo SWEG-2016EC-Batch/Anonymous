@@ -197,12 +197,12 @@ const string CYAN = "\033[36m";
 	// if the cards choosen by the user match, count for win, display win if not count for loss display lose and shuffle 
         if (grid[row1][col1] == grid[row2][col2])
 		{
-            cout << "You won! It's a match!" << endl;
+            cout<<BLUE << "You won! It's a match!" << endl;
             wins++;
         } 
 		else 
 		{
-            cout << "You lose! It is not a match! Reshuffling...\n";
+            cout<<RED << "You lose! It is not a match! Reshuffling...\n";
             revealed[row1][col1] = false;
 	    revealed[row2][col2] = false;
             shuffle(column);
