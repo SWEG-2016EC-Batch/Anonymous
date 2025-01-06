@@ -198,54 +198,7 @@ int main()
 		{
             cout << "You lose! It is not a match! Reshuffling...\n";
             revealed[row1][col1] = false;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- revealed[row2][col2] = false;
+	    revealed[row2][col2] = false;
             shuffle(column);
             losses++;
         }
