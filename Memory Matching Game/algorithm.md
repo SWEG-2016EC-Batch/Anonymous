@@ -53,27 +53,67 @@
 
 •Game Loop:
 
-*To initiate the round set gameover = false.
+* To initiate the round set gameover = false.
 
-*As gameover is not yet set the round is still active.
+* As gameover is not yet set the round is still active.
 
-*Show the user the current state of the grid:
+* Show the user the current state of the grid:
 
-*Display the revealed numbers.
+* Display the revealed numbers.
 
-*All unrevealed numbers should be hidden behind an asterisk (*).
+* All unrevealed numbers should be hidden behind an asterisk (*).
 
 • Receive User Input:
 
-*ask for the row and the column of the first card.
+* ask for the row and the column of the first card.
 
-*ask for the row and the column of the second card.
+* ask for the row and the column of the second card.
 
-*The input values must be verified for boundaries, including the indices.
+* The input values must be verified for boundaries, including the indices.
 
-*If a user calls a card twice, the system must ask him to input again.
+* If a user calls a card twice, the system must ask him to input again.
 
-*If the card has already been selected the user must be informed and put the input prompts such card  again.
+* If the card has already been selected the user must be informed and put the input prompts such card  again.
+
+* Reveal Cards:
+
+* Temporarily reveal the cards selected by the user on the grid.
+
+* Print  the grid with changes made to the cards.
+
+* Check for Match:
+
+* In case the two cards selected are the same:
+
+* Announce success and increase the number of wins by 1.
+
+* Set MatchFound = true.
+
+* If the case is that the cards are not the same:
+
+* Let the user know about it and keep hiding the two cards this time.
+
+* If both the cards turned out to not match even on shuffling the grid: 
+
+* Increase the the lose count.
+
+ * Check for Completion:
+ 
+ * If every single card is selected gameOver = true.
+ 
+ * The variable tracking rounds is automatically incremented by one.
+ 
+ * End Round:
+ 
+ * Encourage the user for completing his game.
+ 
+ * Ask him to either stop the game (By pressing 0) or continue on round one.
+ 
+ * After leaving the iteration, the loop continues:
+ 
+ * Display The overall number of rounds played, and won and lost
+ 
+ * End of Program:
         
     
 
