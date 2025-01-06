@@ -209,26 +209,6 @@ const string CYAN = "\033[36m";
             losses++;
         }
 
-        // Ask if the user wants to continue after every win or loss
-        int choice;
-        // prompt the user the user to enter 1 for Yes / 0 for No
-        cout<<GREEN << "Would you like to continue? (1 for Yes / 0 for No): ";
-        cin >> choice;
-		
-		// if the choice is invalid allow the user to choose again
-        while (cin.fail() || (choice != 0 && choice != 1)) {
-            cin.clear();
-            cin.ignore(1000, '\n');
-            cout<<RED << "Invalid input. Please enter 1 to continue or 0 to exit: ";
-            cin >> choice;
-        }
-		
-		// if the choice is 0 or quit notifies the user and break 
-        if (choice == 0) {
-            cout<<BLUE << "Goodbye! Thanks for playing.\n";
-            break;
-        }
-
         // Check if the game is over
         //make the gameOver variable to true, assuming all elements in the "revealed" array have been revealed.
         gameOver = true;
@@ -257,6 +237,33 @@ const string CYAN = "\033[36m";
 	// check, display the player's total wins and losses 
     int rounds = wins + losses; 
     cout<<BLUE << "You played "<<rounds<<" rounds and \n You won " << wins << " rounds and lost " << losses << " rounds.\n";
-    return 0;
+    
+// Ask if the user wants to continue after every win or loss
+        int choice;
+        // prompt the user the user to enter 1 for Yes / 0 for No
+        cout<<GREEN << "Would you like to play again? (1 for Yes / 0 for No): ";
+        cin >> choice;
+		
+		// if the choice is invalid allow the user to choose again
+        while (cin.fail() || (choice != 0 && choice != 1)) {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout<<RED << "Invalid input. Please enter 1 to continue or 0 to exit: ";
+            cin >> choice;
+        }
+		
+		// if the choice is 0 or quit or  if the choice is 1 or replay
+		if (choice ==1)
+        {
+        	cout<<" restarting... "<<endl;
+        	goto play;	
+		}
+        else if (choice == 0) 
+		{
+            cout<<BLUE << "Goodbye! Thanks for playing.\n";
+        }
+            
+
+return 0;
 }
 
