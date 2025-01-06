@@ -25,7 +25,33 @@
    - Create a random index for a cell to swap with.
    
    - Pick the element in the current cell and replace it with the element in the cell that was randomly picked.
+     
+* main program:
+* declare variables:
+   - n: user decision to stop or continue (input)
+   - column: number of columns based on difficulty (int)
+   -counter: number of rounds played (int)
+   - win: number of successful matches (int)
+   - lose: number of unsuccessful attempts (int)
 
+* start do-while loop for multiple rounds:
+    * Display Menu with difficulty options:
+        1. Level 1 (4 columns)
+        2. Level 2 (6 columns)
+        3. Level 3 (8 columns)
+        
+    * Get the user input for difficulty level (1, 2, or 3)
+    * if input is invalid:
+        * clear screen
+        * ask user to input again
+    
+    * Set `column` based on selected level (4 for level 1, 6 for level 2, 8 for level 3)
+
+    * Initialize Grid:
+        - Grid consists of pairs of numbers
+        - Shuffle grid using shuffle(column) function
+        
+    
 
 
 
