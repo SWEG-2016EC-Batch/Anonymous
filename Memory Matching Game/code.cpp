@@ -55,23 +55,29 @@ void shuffle(int column)
 
 int main() 
 {
-	// change the background color of the console to purple
-	system("color 5e");
+	// ANSI escape codes for colors
+const string RESET = "\033[0m";
+const string RED = "\033[31m";
+const string GREEN = "\033[32m";
+const string YELLOW = "\033[33m";
+const string BLUE = "\033[34m";
+const string MAGENTA = "\033[35m";
+const string CYAN = "\033[36m";
 	
 	// initalize counters 
 	//declare the column for the different levels 
     int column, counter = 0, wins = 0, losses = 0;
 
 	// the menu
-    cout << "******* MENU *******\n";
-    cout << "Please choose the level of the game.\n";
-    cout << "1. Easy \n2. Medium \n3. Hard\n";
+    cout<<BLUE << "******* MENU *******\n";
+    cout<<BLUE << "Please choose the level of the game.\n";
+    cout <<GREEN<< "1. Easy \n2. Medium \n3. Hard\n";
     cin >> column;
 
 	// if the user input invalid column, accepts the column again
     while (column < 1 || column > 3)
 	{
-        cout << "Invalid input! Please choose the right menu.\n";
+        cout <<RED<< "Invalid input! Please choose the right menu.\n";
         cin >> column;
     }
 
@@ -134,35 +140,35 @@ int main()
                 // otherwise hide it by using *
 				else 
 				{ 
-                    cout << "* ";
+                    cout<<MAGENTA << "* ";
                 }
             }
             cout << endl;
         }
 
         // Get input for the first card
-        cout << "\nEnter the row (0 - 3) and column (0 - " << column - 1 << ") of the first card: ";
+        cout<<GREEN << "\nEnter the row (0 - 3) and column (0 - " << column - 1 << ") of the first card: ";
         cin >> row1 >> col1;
         
 		// if the user fails to to enter the correct rows and column or if the cards are already revealed before,allow the user to enter for rows and col again
         while (cin.fail() || row1 < 0 || row1 >= ROWS || col1 < 0 || col1 >= column || revealed[row1][col1]) { 
             cin.clear();
             cin.ignore(1000, '\n');
-            cout << "Invalid input or card already matched! Try again.\n";
-            cout << "Enter the row (0 - 3) and column (0 - " << column - 1 << ") of the first card: ";
+            cout<<RED << "Invalid input or card already matched! Try again.\n";
+            cout<<GREEN << "Enter the row (0 - 3) and column (0 - " << column - 1 << ") of the first card: ";
             cin >> row1 >> col1;
         }
 
         // Get input for the second card
-        cout << "Enter the row (0 - 3) and column (0 - " << column - 1 << ") of the second card: ";
+        cout<<GREEN << "Enter the row (0 - 3) and column (0 - " << column - 1 << ") of the second card: ";
         cin >> row2 >> col2;
 		
 	// if the user fails to to enter the correct rows and column or if the cards are already revealed before,allow the user to enter for rows and col again
         while (cin.fail() || row2 < 0 || row2 >= ROWS || col2 < 0 || col2 >= column || revealed[row2][col2] || (row1 == row2 && col1 == col2)) {
             cin.clear();
             cin.ignore(1000, '\n');
-            cout << "Invalid input or card already matched! Try again.\n";
-            cout << "Enter the row (0 - 3) and column (0 - " << column - 1 << ") of the second card: ";
+            cout <<RED<< "Invalid input or card already matched! Try again.\n";
+            cout<<GREEN<< "Enter the row (0 - 3) and column (0 - " << column - 1 << ") of the second card: ";
             cin >> row2 >> col2;
         }
 
@@ -182,7 +188,7 @@ int main()
                 }
 				else
 				{
-                    cout << "* ";
+                    cout<<MAGENTA << "* ";
                 }
             }
             cout << endl;
@@ -206,20 +212,20 @@ int main()
         // Ask if the user wants to continue after every win or loss
         int choice;
         // prompt the user the user to enter 1 for Yes / 0 for No
-        cout << "Would you like to continue? (1 for Yes / 0 for No): ";
+        cout<<GREEN << "Would you like to continue? (1 for Yes / 0 for No): ";
         cin >> choice;
 		
 		// if the choice is invalid allow the user to choose again
         while (cin.fail() || (choice != 0 && choice != 1)) {
             cin.clear();
             cin.ignore(1000, '\n');
-            cout << "Invalid input. Please enter 1 to continue or 0 to exit: ";
+            cout<<RED << "Invalid input. Please enter 1 to continue or 0 to exit: ";
             cin >> choice;
         }
 		
 		// if the choice is 0 or quit notifies the user and break 
         if (choice == 0) {
-            cout << "Goodbye! Thanks for playing.\n";
+            cout<<BLUE << "Goodbye! Thanks for playing.\n";
             break;
         }
 
@@ -245,11 +251,11 @@ int main()
 		// if "gameOver" remains true, display a congratulatory message indicating that the player has matched all pairs.
         if (gameOver) 
 		{
-            cout << "Congratulations! You've matched all the pairs!\n";
+            cout <<BLUE<< "Congratulations! You've matched all the pairs!\n";
         }
     }
 	// check, display the player's total wins and losses 
-    cout << "You won " << wins << " rounds and lost " << losses << " rounds.\n";
+    cout<<BLUE << "You won " << wins << " rounds and lost " << losses << " rounds.\n";
     return 0;
 }
 
