@@ -114,24 +114,6 @@
  * Display The overall number of rounds played, and won and lost
  
  * End of Program:
-        
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## FLOWCHART 
 
@@ -141,26 +123,23 @@
     B --> C[Input Level Choice]
     C --> D[Validate Input]
     D --> E[Set Columns Based on Choice]
-    E --> F[Initialize Grid]
-    F --> G[Shuffle Grid]
-    G --> H[Main Game Loop]
-    H --> I[Display Grid with astrisk]
-    I --> J[Input Card 1]
-    J --> K[Validate Input]
-    K --> L[Input Card 2]
-    L --> M[Validate Input]
-    M --> N[Reveal Cards]
-    N --> O[Display Updated Grid]
-    O --> P{Check for Match?}
-    P -- Yes --> Q[Win, Increment Win Count]
-    P -- No --> R[Lose, Reshuffle, Increment Loss Count]
-    Q --> S[Ask to Continue]
-    R --> S
-    S --> T[Validate Input]
-    T --> U{Continue or Exit?}
-    U -- Yes --> H
-    U -- No --> V[Exit Game]
-    V --> W[Display Win/Loss Summary]
-    W --> X(End Game)
-    X --> Y[Display Congratulations]
-    Y --> Z(End)
+    E --> F[Initialize and Shuffle Grid]
+    F --> G[Main Game Loop]
+    G --> H[Display Grid with Hidden Cards]
+    H --> I[Input Card 1]
+    I --> J[Validate Card 1]
+    J --> K[Input Card 2]
+    K --> L[Validate Card 2]
+    L --> M[Reveal Selected Cards]
+    M --> N[Display Updated Grid]
+    N --> O{Do Cards Match?}
+    O -- Yes --> P[Increment Wins and Keep Cards Revealed]
+    O -- No --> Q[Reshuffle Grid and Increment Losses]
+    P --> R{Are All Cards Revealed?}
+    Q --> R
+    R -- Yes --> S[Display Congratulations]
+    S --> T[Display Win/Loss Summary]
+    T --> U[Ask to Replay]
+    U --> V{Replay or Exit?}
+    V -- Replay --> F
+    V -- Exit --> W(End Game)
