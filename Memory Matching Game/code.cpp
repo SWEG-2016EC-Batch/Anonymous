@@ -255,7 +255,8 @@ const string CYAN = "\033[36m";
         }
     }
 	// check, display the player's total wins and losses 
-    cout<<BLUE << "You won " << wins << " rounds and lost " << losses << " rounds.\n";
+    int rounds = wins + losses; 
+    cout<<BLUE << "You played "<<rounds<<" rounds and \n You won " << wins << " rounds and lost " << losses << " rounds.\n";
     return 0;
 }
 
