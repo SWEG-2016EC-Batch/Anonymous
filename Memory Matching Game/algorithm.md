@@ -54,16 +54,25 @@
 •Game Loop:
 
 *To initiate the round set gameover = false.
+
 *As gameover is not yet set the round is still active.
+
 *Show the user the current state of the grid:
+
 *Display the revealed numbers.
+
 *All unrevealed numbers should be hidden behind an asterisk (*).
 
 • Receive User Input:
+
 *ask for the row and the column of the first card.
+
 *ask for the row and the column of the second card.
+
 *The input values must be verified for boundaries, including the indices.
+
 *If a user calls a card twice, the system must ask him to input again.
+
 *If the card has already been selected the user must be informed and put the input prompts such card  again.
         
     
